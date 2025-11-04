@@ -10,6 +10,5 @@ describe('normalizeName', () => {
   it('converte todas as letras para minúsculas', () => {
     expect(normalizeName('MARIA DA SILVA')).toBe('maria da silva')
   })
-
   
   })
