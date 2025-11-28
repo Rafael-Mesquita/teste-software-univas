@@ -148,8 +148,9 @@ const Tasks: React.FC = () => {
         {showForm && (
           <form onSubmit={handleSubmit} style={{ marginTop: '20px' }}>
             <div className="form-group">
-              <label>Título:</label>
+              <label htmlFor='title'>Título:</label>
               <input
+                id='title'
                 type="text"
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
@@ -157,15 +158,17 @@ const Tasks: React.FC = () => {
               />
             </div>
             <div className="form-group">
-              <label>Descrição:</label>
+              <label htmlFor='description'>Descrição:</label>
               <textarea
+                id='description'
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               />
             </div>
             <div className="form-group">
-              <label>Status:</label>
+              <label htmlFor='status'>Status:</label>
               <select
+                id='status'
                 value={formData.status}
                 onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
               >
@@ -176,8 +179,9 @@ const Tasks: React.FC = () => {
               </select>
             </div>
             <div className="form-group">
-              <label>Prioridade:</label>
+              <label htmlFor='priority'>Prioridade:</label>
               <select
+                id='priority'
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value as any })}
               >
@@ -188,8 +192,9 @@ const Tasks: React.FC = () => {
               </select>
             </div>
             <div className="form-group">
-              <label>Usuário:</label>
+              <label htmlFor='user'>Usuário:</label>
               <select
+                id='user'
                 value={formData.userId}
                 onChange={(e) => setFormData({ ...formData, userId: e.target.value })}
                 required
@@ -203,8 +208,9 @@ const Tasks: React.FC = () => {
               </select>
             </div>
             <div className="form-group">
-              <label>Categoria:</label>
+              <label htmlFor='category'>Categoria:</label>
               <select
+                id='category'
                 value={formData.categoryId}
                 onChange={(e) => setFormData({ ...formData, categoryId: e.target.value })}
                 required
